@@ -51,12 +51,14 @@ This README.md will provide a clear overview of my portfolio website and help vi
 
 ###Contact Name: Gopichandh Gurram
 
-Email: gopichandh.reddy@gmail.com
+Email: Prasad12.das@gmail.com
 
-LinkedIn: www.linkedin.com/in/gopichandh-gurram
+LinkedIn: https://www.linkedin.com/in/saiprasaddas/
 
-GitHub: https://github.com/Gopi138942
+GitHub: https://github.com/Prasad12-das
 
-Kaggle: https://www.kaggle.com/gurramgopichandh
+Kaggle: https://www.kaggle.com/sprasad018
 
-https://leetcode.com/u/gopi135942/ to check my solving skills
+Leetcode: https://leetcode.com/u/Prasad018/
+
+HackerRank: https://www.hackerrank.com/profile/prasad12_das
