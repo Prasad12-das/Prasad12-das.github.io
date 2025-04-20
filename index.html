@@ -1,225 +1,1227 @@
-<!DOCTYPE HTML>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Manas Vardhan's personal website</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="./assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="./assets/css/noscript.css" />
-	</noscript>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailaja Prasad Das </title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #0066cc);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .visitor-counter {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .visitor-counter i {
+            margin-right: 5px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            font-style: italic;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem 0;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #003366;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: #003366;
+        }
+
+        .card a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .card a:hover {
+            color: #003366;
+        }
+
+        footer {
+            background: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .footer-visitor-counter {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-visitor-counter i {
+            margin-right: 5px;
+        }
+
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill {
+            background: #f4f4f9;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: #003366;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Call-to-Action Button */
+        .cta-button {
+            display: inline-block;
+            background: #0066cc;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #003366;
+            transform: translateY(-3px);
+        }
+
+        /* Resume Section */
+        .resume-section {
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .resume-section h2 {
+            font-size: 2rem;
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+
+        .resume-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .resume-button {
+            background: #ffdd57;
+            color: #003366;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .resume-button:hover {
+            background: #ffcc00;
+            transform: translateY(-3px);
+        }
+
+        /* Contact Section */
+        #contact {
+            background: #003366;
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        #contact .cta-button {
+            background: #ffdd57;
+            color: #003366;
+            margin: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        #contact .cta-button:hover {
+            background: #ffcc00;
+        }
+
+        /* Like Button Styles */
+        .like-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 1rem;
+        }
+
+        .like-button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .like-button:hover {
+            background: #003366;
+            transform: scale(1.05);
+        }
+
+        .like-button.liked {
+            background: #ff4d4d;
+        }
+
+        .like-count {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* LinkedIn Follow Button */
+        .linkedin-follow {
+            background: #0077b5;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+            margin-top: 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .linkedin-follow:hover {
+            background: #005582;
+            transform: scale(1.05);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .toast.show {
+            opacity: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Dynamic Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(63, 94, 251, 0.1), rgba(252, 70, 107, 0.1));
+            overflow: hidden;
+        }
+
+        .background span {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            animation: move 10s infinite;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-800px) translateX(800px);
+                opacity: 0;
+            }
+        }
+
+        /* Inspirational Quote */
+        .inspiration {
+            font-style: italic;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-left: 4px solid #0066cc;
+            margin: 1.5rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            z-index: 1000;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .chatbot-header {
+            background: #0066cc;
+            color: white;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-body {
+            background: white;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chatbot-body.active {
+            height: 400px;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+        }
+        
+        .message {
+            margin-bottom: 10px;
+            max-width: 80%;
+            padding: 8px 12px;
+            border-radius: 18px;
+            line-height: 1.4;
+        }
+        
+        .bot-message {
+            background: #f1f1f1;
+            align-self: flex-start;
+            border-radius: 18px 18px 18px 4px;
+        }
+        
+        .user-message {
+            background: #0066cc;
+            color: white;
+            align-self: flex-end;
+            border-radius: 18px 18px 4px 18px;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .chat-input button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        
+        .quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        
+        .quick-reply {
+            background: #e9f5ff;
+            color: #0066cc;
+            border: none;
+            border-radius: 15px;
+            padding: 5px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .quick-reply:hover {
+            background: #0066cc;
+            color: white;
+        }
+        
+        .typing-indicator {
+            display: inline-block;
+            padding: 10px;
+        }
+        
+        .typing-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #888;
+            margin-right: 3px;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+        
+        .typing-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+            margin-right: 0;
+        }
+        
+        @keyframes typingAnimation {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-5px); }
+        }
+
+        /* Admin Panel Styles */
+        .admin-panel {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 15px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .admin-toggle {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #003366;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1001;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .admin-panel h3 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        .visitor-log {
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .visitor-item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .visitor-item:last-child {
+            border-bottom: none;
+        }
+
+        .visitor-ip {
+            font-weight: bold;
+            color: #0066cc;
+        }
+
+        .visitor-time {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .admin-controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .admin-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .download-btn {
+            background: #0066cc;
+            color: white;
+        }
+
+        .clear-btn {
+            background: #ff4d4d;
+            color: white;
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+<body>
+    <!-- Dynamic Background -->
+    <div class="background">
+        <span style="top: 20%; left: 30%; width: 50px; height: 50px; animation-duration: 15s;"></span>
+        <span style="top: 60%; left: 80%; width: 70px; height: 70px; animation-duration: 12s;"></span>
+        <span style="top: 40%; left: 50%; width: 30px; height: 30px; animation-duration: 10s;"></span>
+        <span style="top: 90%; left: 20%; width: 40px; height: 40px; animation-duration: 18s;"></span>
+    </div>
 
-<body class="is-preload">
+    <header>
+        <div class="visitor-counter">
+            <i class="fas fa-eye"></i>
+            <span id="visitorCount">Loading...</span>
+        </div>
+        <h1>Gopichandh Gurram</h1>
+        <p>MSc Data Analytics | Data Scientist | Machine Learning Engineer | Problem Solver</p>
+    </header>
 
-	<!-- Sidebar -->
-	<section id="sidebar">
-		<div class="inner">
-			<nav>
-				<ul>
-					<li><a href="#intro">Welcome</a></li>
-					<li><a href="#one">Who am I</a></li>
-					<li><a href="#two">What do I do</a></li>
-					<li><a href="#three">Get in touch</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <main class="container">
+        <!-- About Me Section -->
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>
+                I am a <strong>Data Scientist</strong> with a strong background in <strong>machine learning</strong>, <strong>data analytics</strong>, and <strong>statistical modeling</strong>. I specialize in building predictive models, automating workflows, and creating data-driven solutions to solve real-world problems. With expertise in Python, SQL, and data visualization tools like Tableau, I aim to leverage my skills to drive innovation and deliver actionable insights.
+            </p>
+            
+            <div class="inspiration">
+                <p>There was a time when I saw data as just numbers—until I realized that patterns, insights, and the power to shape the future were hidden within those numbers. My journey began with curiosity—how can we make better decisions using data? That single question led me down a path of discovery, from solving complex problems in aerospace engineering to unlocking the true potential of machine learning and AI.</p>
+                
+                <p>I embraced the world of data science, predictive modeling, and automation as a career and a passion. I built ML automation systems that saved time, designed AI solutions that optimized business processes, and crafted data-driven strategies that empowered decision-making. But through it all, I learned that data is not just about analysis—it's about impact.</p>
+                
+                <p><em>"Don't let the pain stop the process. Let the process make the pain worth it."</em> Every challenge I faced, every bug I fixed, and every late-night debugging session strengthened my resolve. I don't just work with data—I make it work for the world.</p>
+                
+                <p>Today, I stand at the intersection of technology, business, and innovation, constantly seeking new ways to push boundaries. The journey is far from over, and the best insights are yet to come.</p>
+            </div>
+        </section>
 
-		<!-- Intro -->
-		<section id="intro" class="wrapper style1 fullscreen fade-up">
-			<div class="inner">
-				<h1>Manas Vardhan</h1>
-				<p>AI Developer<br />
-					Making scalable and reliable AI solutions</p>
-				<ul class="actions">
-					<li><a href="#one" class="button scrolly">Learn more</a></li>
-				</ul>
-			</div>
-		</section>
+        <!-- Resume Section with Updated Google Drive Link -->
+        <section id="resume" class="resume-section">
+            <h2>Resume</h2>
+            <p>
+                View my resume to explore my professional experience, skills, and achievements in detail. My resume highlights my expertise in <strong>data science</strong>, <strong>machine learning</strong>, and <strong>data analytics</strong>, along with my academic background and certifications.
+            </p>
+            <a href="https://drive.google.com/file/d/14b3xw_wE_YUVCyu4NM0PtG-pqjwsorYK/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="resume-button">View Resume</a>
+        </section>
 
-		<!-- One -->
-		<section id="one" class="wrapper style2 spotlights">
-			<section>
-				<a href="#" class="image"><img src="images/WorkExp.jpg" alt="" data-position="center center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Work Experience</h2>
-						<p>Currently working as a Software Development Engineer at <a href="https://www.jpmorgan.com/" target="_blank">JPMorgan Chase & Co.</a>, focusing on Machine Learning and Data Science. Previously held positions as a Data Scientist and Machine Learning Engineer at SimpliClarify and SmokeTrees LLP.</p>
-						<ul class="actions">
-							<li><a href="more.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/research.avif" alt="" data-position="top center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Research</h2>
-                        <p>My research has included mitigating biases in credit scoring models against low income applicants, balancing urban development with needs of rural communities to ensure sustainable growth and enhancing the reliability of LLMs for enable adoption in sensitive areas like psychology </p>
-                        <ul class="actions">
-							<li><a href="more.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/projects.png" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Projects</h2>
-                        <p>My work includes developing a machine learning-based system for monitoring and improving video stream quality, achieving high detection accuracy. I also focused on using computer vision techniques for environmental monitoring, specifically detecting oil spills from satellite images. I also developed a predictive tool for assessing burnout risk, which was deployed in a real-time application to help users manage their well-being.                        </p>
-                        <ul class="actions">
-							<li><a href="more.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-		</section>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="card">
+                <h2>Retail Sales Analysis - SQL Project</h2>
+                <p>Analyzed retail sales data using SQL to identify trends, top-performing products, and customer behavior. The project includes data cleaning, querying, and visualization.</p>
+                <a href="https://github.com/__" target="_blank">View Project</a>
+            </div>
+        </section>
 
-		<!-- Two -->
-		<section id="two" class="wrapper style3 fade-up">
-			<div class="inner">
-				<h2>Some details you might like</h2>
-				<div class="features">
-					<section>
-						<span class="icon solid major fa-code"></span>
-						<h3>Technical Expertise</h3>
-						<p>Proficient in Python, Splunk, Cribl, AWS, with extensive experience in model development, deployment, and performance optimization in real-world applications.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-lock"></span>
-						<h3>Data Driven & Results-Oriented</h3>
-						<p>I benchmark my progress by quantifying my impact through benchmarks. This enables me to track and focus my effort and measure the impact of my work.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-cog"></span>
-						<h3>Scalable Approach</h3>
-						<p>I often deal with high volumes of data and set up data pipelines that carry mutliple TBs of data daily. To handle such high volumes, I focus specifically on making systems scalable.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-desktop"></span>
-						<h3>Tech Innovation</h3>
-						<p>I often lead efforts in optimizations and development of new features, often developing ML use-cases to reduce workloads on physical systems enabling better use of employee hours.</p>
-					</section>
-					<!-- <section>
-						<span class="icon solid major fa-link"></span>
-						<h3>Excellent Communicator</h3>
-						<p>Having technical skills alone doesn't cut it. Over the years I have invested significantly in
-							becoming an efficient communicator through Toastmasters Inc, this enables me to work in extremely diverse
-						teams as well.</p>
-					</section>
-					<section>
-						<span class="icon major fa-gem"></span>
-						<h3>An Overall Perfectionist</h3>
-						<p>Whether it be mathematics, development or management, I have a common goal in all of it: to
-							attain excellence and subsequently perfection.</p>
-					</section> -->
-				</div>
-				<ul class="actions">
-					<li><a href="more.html" class="button">Learn more</a></li>
-				</ul>
-			</div>
-		</section>
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">Python</div>
+                <div class="skill">Machine Learning</div>
+                <div class="skill">Deep Learning</div>
+                <div class="skill">Data Analysis</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Tableau</div>
+                <div class="skill">PowerBI</div>
+                <div class="skill">Cloud Computing</div>
+            </div>
+        </section>
 
-		<!-- Three -->
-		<section id="three" class="wrapper style1 fade-up">
-			<div class="inner">
-				<h2>Get in touch</h2>
-				<p>More than competition, today industry is thriving on collaboration, I am sure it will be great
-					collaborating with you as well.</p>
-				<div class="split style1">
-					<section>
-						<br>
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<br>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<br>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="5"></textarea>
-							</div>
-						</div>
-						<br>
-						<ul class="actions">
-							<li><a href="mailto:manasvardhan@gmail.com" class="button submit">Send Message</a></li>
-						</ul>
-					</section>
-					<section>
-						<ul class="contact">
-							<li>
-								<h3>Address</h3>
-								<span>645A/223A Jankivihar<br />
-									Jankipuram,Lucknow-226021<br />
-									India</span>
-							</li>
-							<li>
-								<h3>Email</h3>
-								<a href="mailto:manasvardhan@gmail.com">manasvardhan@gmail.com</a>
-							</li>
-							<li>
-								<h3>Phone</h3>
-								<span>+91-9795685079</span>
-							</li>
-							<li>
-								<h3>Social</h3>
-								<ul class="icons">
-									<li><a href="https://twitter.com/vardhan_manas" class="icon brands fa-twitter"><span
-												class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/manas.vardhan/"
-											class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
-									</li>
-									<li><a href="https://github.com/ManasVardhan" class="icon brands fa-github"><span
-												class="label">GitHub</span></a>
-									</li>
-									<li><a href="https://www.instagram.com/manasvardhan/"
-											class="icon brands fa-instagram"><span class="label">Instagram</span></a>
-									</li>
-									<li><a href="https://www.linkedin.com/in/manas-vardhan/"
-											class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</section>
-				</div>
-			</div>
-		</section>
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="card">
+                <h2>Machine Learning - Coursera</h2>
+                <p>Completed the Machine Learning course by Andrew Ng.</p>
+                <a href="https://www.coursera.org/user/da6e9f1c333e31758c9add082ed6bde7" target="_blank">View Certificate</a>
+            </div>
+            <div class="card">
+                <h2>Data Science - Forage</h2>
+                <p>Completed the Data Science program on Forage.</p>
+                <a href="https://www.theforage.com/profile/5LfZhxFN3HzwJ6YG7" target="_blank">View Certificate</a>
+            </div>
+        </section>
+    </main>
 
-	</div>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Let's connect! Feel free to reach out for collaborations or job opportunities.</p>
+        <a href="mailto:gopichandh.reddy@gmail.com" class="cta-button">Email Me</a>
+        <a href="https://www.linkedin.com/in/gopichandh-gurram/" target="_blank" class="cta-button">LinkedIn</a>
+        <a href="https://www.kaggle.com/gurramgopichandh" target="_blank" class="cta-button">Kaggle Profile</a>
+        <a href="https://leetcode.com/u/gopi135942/" target="_blank" class="cta-button">LeetCode Profile</a>
+        
+        <div class="like-container">
+            <button id="likeButton" class="like-button">
+                <i class="far fa-heart"></i> Like
+            </button>
+            <span class="like-count" id="likeCount">0</span>
+        </div>
+        
+        <a href="https://www.linkedin.com/in/gopichandh-gurram/" target="_blank" class="linkedin-follow">
+            <i class="fab fa-linkedin"></i> Follow on LinkedIn
+        </a>
+    </section>
 
-	<!-- Footer -->
-	<footer id="footer" class="wrapper style1-alt">
-		<div class="inner">
-			<ul class="menu">
-				<li>&copy; Untitled. All rights reserved.</li>
-				<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-			</ul>
-		</div>
-	</footer>
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+    <footer>
+        <p>&copy; 2025 Gopichandh Gurram. All Rights Reserved.</p>
+        <p><a href="https://github.com/Gopi138942" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/gopichandh-gurram/" target="_blank">LinkedIn</a></p>
+        <div class="footer-visitor-counter">
+            <i class="fas fa-users"></i>
+            <span id="footerVisitorCount">Loading...</span>
+        </div>
+    </footer>
 
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+        <div class="chatbot-header" id="chatbotToggle">
+            <span>Need help? Ask me anything!</span>
+            <span id="chatbotIcon">▼</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+                <button id="sendButton">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="admin-toggle" id="adminToggle">
+        <i class="fas fa-user-shield"></i>
+    </div>
+
+    <div class="admin-panel" id="adminPanel">
+        <h3>Visitor Analytics</h3>
+        <div class="visitor-log" id="visitorLog">
+            Loading visitor data...
+        </div>
+        <div class="admin-controls">
+            <button class="admin-btn download-btn" id="downloadLog">
+                <i class="fas fa-download"></i> Download Log
+            </button>
+            <button class="admin-btn clear-btn" id="clearLog">
+                <i class="fas fa-trash"></i> Clear Log
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Visitor counter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if localStorage has a visitor count
+            if (localStorage.getItem('visitorCount')) {
+                // If it exists, increment it
+                let count = parseInt(localStorage.getItem('visitorCount'));
+                count++;
+                localStorage.setItem('visitorCount', count);
+                updateVisitorCount(count);
+            } else {
+                // If not, initialize it
+                localStorage.setItem('visitorCount', 1);
+                updateVisitorCount(1);
+            }
+            
+            function updateVisitorCount(count) {
+                // Format the number with commas
+                const formattedCount = count.toLocaleString();
+                document.getElementById('visitorCount').textContent = formattedCount;
+                document.getElementById('footerVisitorCount').textContent = formattedCount;
+            }
+            
+            // Animation for the counter
+            const counterElements = document.querySelectorAll('#visitorCount, #footerVisitorCount');
+            counterElements.forEach(el => {
+                el.style.opacity = '0';
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.5s ease-in-out';
+                    el.style.opacity = '1';
+                }, 500);
+            });
+            
+            // Like Button Functionality
+            const likeButton = document.getElementById('likeButton');
+            const likeCount = document.getElementById('likeCount');
+            const toast = document.getElementById('toast');
+            
+            // Initialize like count
+            let likes = localStorage.getItem('portfolioLikes') || 0;
+            likeCount.textContent = likes;
+            
+            // Check if already liked
+            if (localStorage.getItem('hasLiked')) {
+                likeButton.classList.add('liked');
+                likeButton.innerHTML = '<i class="fas fa-heart"></i> Liked';
+            }
+            
+            // Like button click handler
+            likeButton.addEventListener('click', function() {
+                if (!localStorage.getItem('hasLiked')) {
+                    likes++;
+                    localStorage.setItem('portfolioLikes', likes);
+                    localStorage.setItem('hasLiked', 'true');
+                    likeCount.textContent = likes;
+                    likeButton.classList.add('liked');
+                    likeButton.innerHTML = '<i class="fas fa-heart"></i> Liked';
+                    showToast('Thanks for your support! ❤️');
+                }
+            });
+            
+            // Toast notification function
+            function showToast(message) {
+                toast.textContent = message;
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+
+            // Chatbot functionality
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotBody = document.getElementById('chatbotBody');
+            const chatMessages = document.getElementById('chatMessages');
+            const userInput = document.getElementById('userInput');
+            const sendButton = document.getElementById('sendButton');
+            const chatbotIcon = document.getElementById('chatbotIcon');
+            
+            let isChatOpen = false;
+            
+            // Toggle chatbot visibility
+            chatbotToggle.addEventListener('click', function() {
+                isChatOpen = !isChatOpen;
+                chatbotBody.classList.toggle('active', isChatOpen);
+                chatbotIcon.textContent = isChatOpen ? '▲' : '▼';
+                
+                if (isChatOpen && chatMessages.children.length === 0) {
+                    showWelcomeMessage();
+                }
+            });
+            
+            // Send message when button is clicked or Enter is pressed
+            sendButton.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            function sendMessage() {
+                const message = userInput.value.trim();
+                if (message) {
+                    addMessage(message, 'user');
+                    userInput.value = '';
+                    respondToMessage(message);
+                }
+            }
+            
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message', `${sender}-message`);
+                messageDiv.textContent = text;
+                chatMessages.appendChild(messageDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+            function showTypingIndicator() {
+                const typingDiv = document.createElement('div');
+                typingDiv.classList.add('message', 'bot-message', 'typing-indicator');
+                typingDiv.id = 'typingIndicator';
+                
+                typingDiv.innerHTML = `
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                `;
+                
+                chatMessages.appendChild(typingDiv);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                return typingDiv;
+            }
+            
+            function removeTypingIndicator() {
+                const typingIndicator = document.getElementById('typingIndicator');
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            }
+            
+            function showWelcomeMessage() {
+                const welcomeMessage = "Hello! I'm your virtual assistant. I can help you navigate Gopichandh's portfolio. Here are some things you can ask:";
+                const quickReplies = [
+                    "Tell me about Gopichandh",
+                    "Show me his projects",
+                    "What skills does he have?",
+                    "How can I contact him?"
+                ];
+                
+                addMessage(welcomeMessage, 'bot');
+                
+                setTimeout(() => {
+                    const quickReplyDiv = document.createElement('div');
+                    quickReplyDiv.classList.add('quick-replies');
+                    
+                    quickReplies.forEach(reply => {
+                        const button = document.createElement('button');
+                        button.classList.add('quick-reply');
+                        button.textContent = reply;
+                        button.addEventListener('click', function() {
+                            addMessage(reply, 'user');
+                            respondToMessage(reply);
+                        });
+                        quickReplyDiv.appendChild(button);
+                    });
+                    
+                    const messageDiv = document.createElement('div');
+                    messageDiv.classList.add('message', 'bot-message');
+                    messageDiv.appendChild(quickReplyDiv);
+                    
+                    chatMessages.appendChild(messageDiv);
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 500);
+            }
+            
+            function respondToMessage(message) {
+                const typingIndicator = showTypingIndicator();
+                
+                setTimeout(() => {
+                    removeTypingIndicator();
+                    
+                    const lowerMessage = message.toLowerCase();
+                    let response = "";
+                    let action = null;
+                    
+                    if (lowerMessage.includes('about') || lowerMessage.includes('who') || lowerMessage.includes('gopichandh')) {
+                        response = "Gopichandh Gurram is a Data Scientist with expertise in machine learning, data analytics, and statistical modeling. He specializes in building predictive models and data-driven solutions. Would you like to know more about his background or skills?";
+                        action = () => {
+                            window.location.href = "#about";
+                            if (isChatOpen) {
+                                chatbotBody.classList.remove('active');
+                                chatbotIcon.textContent = '▼';
+                                isChatOpen = false;
+                            }
+                        };
+                    } 
+                    else if (lowerMessage.includes('project') || lowerMessage.includes('work')) {
+                        response = "Gopichandh has worked on several interesting projects including an AutoML system, attendance tracker, and retail sales analysis. You can view them in the Projects section.";
+                        action = () => {
+                            window.location.href = "#projects";
+                            if (isChatOpen) {
+                                chatbotBody.classList.remove('active');
+                                chatbotIcon.textContent = '▼';
+                                isChatOpen = false;
+                            }
+                        };
+                    }
+                    else if (lowerMessage.includes('skill') || lowerMessage.includes('expert')) {
+                        response = "His skills include Python, Machine Learning, SQL, Tableau, and more. Check out the Skills section for details.";
+                        action = () => {
+                            window.location.href = "#skills";
+                            if (isChatOpen) {
+                                chatbotBody.classList.remove('active');
+                                chatbotIcon.textContent = '▼';
+                                isChatOpen = false;
+                            }
+                        };
+                    }
+                    else if (lowerMessage.includes('contact') || lowerMessage.includes('reach') || lowerMessage.includes('connect')) {
+                        response = "You can contact Gopichandh via email at gopichandh.reddy@gmail.com or through his LinkedIn profile. The Contact section has all the details.";
+                        action = () => {
+                            window.location.href = "#contact";
+                            if (isChatOpen) {
+                                chatbotBody.classList.remove('active');
+                                chatbotIcon.textContent = '▼';
+                                isChatOpen = false;
+                            }
+                        };
+                    }
+                    else if (lowerMessage.includes('resume') || lowerMessage.includes('cv')) {
+                        response = "You can download Gopichandh's resume from the Resume section.";
+                        action = () => {
+                            window.location.href = "#resume";
+                            if (isChatOpen) {
+                                chatbotBody.classList.remove('active');
+                                chatbotIcon.textContent = '▼';
+                                isChatOpen = false;
+                            }
+                        };
+                    }
+                    else {
+                        response = "I'm not sure I understand. You can ask me about Prasad's background, skills, projects, or how to contact him. Here are some suggestions:";
+                    }
+                    
+                    addMessage(response, 'bot');
+                    
+                    if (action) {
+                        const actionDiv = document.createElement('div');
+                        actionDiv.classList.add('message', 'bot-message');
+                        
+                        const actionButton = document.createElement('button');
+                        actionButton.classList.add('quick-reply');
+                        actionButton.textContent = "Take me there";
+                        actionButton.addEventListener('click', action);
+                        
+                        actionDiv.appendChild(actionButton);
+                        chatMessages.appendChild(actionDiv);
+                    }
+                    
+                    if (!action) {
+                        const quickReplies = [
+                            "Tell me about Prasad",
+                            "Show me his projects",
+                            "What skills does he have?",
+                            "How can I contact him?"
+                        ];
+                        
+                        const quickReplyDiv = document.createElement('div');
+                        quickReplyDiv.classList.add('quick-replies');
+                        
+                        quickReplies.forEach(reply => {
+                            const button = document.createElement('button');
+                            button.classList.add('quick-reply');
+                            button.textContent = reply;
+                            button.addEventListener('click', function() {
+                                addMessage(reply, 'user');
+                                respondToMessage(reply);
+                            });
+                            quickReplyDiv.appendChild(button);
+                        });
+                        
+                        const messageDiv = document.createElement('div');
+                        messageDiv.classList.add('message', 'bot-message');
+                        messageDiv.appendChild(quickReplyDiv);
+                        
+                        chatMessages.appendChild(messageDiv);
+                    }
+                    
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }, 1000 + Math.random() * 1000); // Random delay for more natural feel
+            }
+
+            // Admin Panel Functionality
+            const adminToggle = document.getElementById('adminToggle');
+            const adminPanel = document.getElementById('adminPanel');
+            const visitorLog = document.getElementById('visitorLog');
+            const downloadLog = document.getElementById('downloadLog');
+            const clearLog = document.getElementById('clearLog');
+
+            // Password protection for admin panel
+            const ADMIN_PASSWORD = "Gopi@123"; // Change this to your desired password
+
+            // Toggle admin panel
+            adminToggle.addEventListener('click', function() {
+                const password = prompt("Enter admin password:");
+                if (password === ADMIN_PASSWORD) {
+                    adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
+                    if (adminPanel.style.display === 'block') {
+                        loadVisitorData();
+                    }
+                } else if (password !== null) {
+                    alert("Incorrect password!");
+                }
+            });
+
+            // Track visitor information
+            function trackVisitor() {
+                // Get visitor information
+                const visitorData = {
+                    timestamp: new Date().toISOString(),
+                    userAgent: navigator.userAgent,
+                    screenWidth: window.screen.width,
+                    screenHeight: window.screen.height,
+                    language: navigator.language,
+                    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    referrer: document.referrer || "Direct visit",
+                    pageUrl: window.location.href,
+                    // Note: IP address will be captured by the server-side script
+                };
+
+                // Send visitor data to server
+                fetch('https://api.ipify.org?format=json')
+                    .then(response => response.json())
+                    .then(data => {
+                        visitorData.ip = data.ip;
+                        return fetch('visitor_tracker.php', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(visitorData)
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error tracking visitor:', error);
+                    });
+            }
+
+            // Load visitor data for admin panel
+            function loadVisitorData() {
+                fetch('visitor_tracker.php?action=get_visitors')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            displayVisitorData(data.visitors);
+                        } else {
+                            visitorLog.innerHTML = "Error loading visitor data.";
+                        }
+                    })
+                    .catch(error => {
+                        visitorLog.innerHTML = "Error loading visitor data: " + error.message;
+                    });
+            }
+
+            // Display visitor data in admin panel
+            function displayVisitorData(visitors) {
+                if (visitors.length === 0) {
+                    visitorLog.innerHTML = "No visitor data available yet.";
+                    return;
+                }
+
+                let html = '';
+                visitors.forEach(visitor => {
+                    html += `
+                        <div class="visitor-item">
+                            <div><span class="visitor-ip">${visitor.ip}</span> - ${visitor.userAgent}</div>
+                            <div class="visitor-time">${new Date(visitor.timestamp).toLocaleString()}</div>
+                            <div>From: ${visitor.referrer}</div>
+                            <div>Screen: ${visitor.screenWidth}x${visitor.screenHeight}</div>
+                        </div>
+                    `;
+                });
+
+                visitorLog.innerHTML = html;
+            }
+
+            // Download visitor log
+            downloadLog.addEventListener('click', function() {
+                fetch('visitor_tracker.php?action=download')
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'visitor_log.csv';
+                        document.body.appendChild(a);
+                        a.click();
+                        window.URL.revokeObjectURL(url);
+                        document.body.removeChild(a);
+                    })
+                    .catch(error => {
+                        alert('Error downloading visitor log: ' + error.message);
+                    });
+            });
+
+            // Clear visitor log
+            clearLog.addEventListener('click', function() {
+                if (confirm('Are you sure you want to clear all visitor data? This cannot be undone.')) {
+                    fetch('visitor_tracker.php?action=clear', {
+                        method: 'POST'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            visitorLog.innerHTML = "Visitor log cleared successfully.";
+                            showToast('Visitor log cleared');
+                        } else {
+                            alert('Error clearing visitor log: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        alert('Error clearing visitor log: ' + error.message);
+                    });
+                }
+            });
+
+            // Track the visitor when page loads
+            trackVisitor();
+        });
+    </script>
 </body>
-
 </html>
