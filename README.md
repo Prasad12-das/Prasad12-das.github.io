@@ -39,7 +39,7 @@ Certifications: List of my certifications with links to verify them.
 Contact: Links to email, LinkedIn, and Kaggle for easy communication.
 How to Use
 Clone the Repository:
-git clone https://github.com/Gopi138942/portfolio-website.git
+git clone https://github.com/Prasad12-das
 ##Feel free to explore the website and reach out to me for collaborations or opportunities!
 
 How to Add This to Your Repository
