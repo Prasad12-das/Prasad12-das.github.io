@@ -649,9 +649,10 @@
         </div>
         <h1>Sailaja Prasad Das</h1>
        <!-- <p>Data & AI Professional | MS in Data Analytics | Ex-Technology Consultant (Accenture, Capgemini) </p> -->
-    <!--    <p>I am a <span class="typed" data-typed-items="Data Engineer, Data Analyst, Data Scientist"></span></p> -->
-         <p>I am a <span class="typed" data-typed-items="Data Engineer, Data Analyst, Data Scientist">Data Scientist</span>
-<span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></p>
+    <p>
+  I am a 
+  <span class="typed" data-typed-items="Data Engineer, Data Analyst, Data Scientist"></span>
+</p>
          
 
     </header>
@@ -797,7 +798,7 @@ With over 5 years of experience in the IT industry, I’ve had the privilege of 
                         -->
      <section id="skills" class="skills section-bg" >
         <div class="section-title">
-          <h1>SKILLS</h1>
+          <h1 style="text-align: left;" >SKILLS </h1>
           <p align="justify">With a diverse skill set encompassing Data Engineering, Analytics and Data Science, I am
             well-equipped to tackle complex data challenges and drive data-centric solutions. Proficient in Python,
             Tableau, SQL, and Azure, I excel in data manipulation, statistical analysis, and building scalable data
@@ -1439,12 +1440,29 @@ With over 5 years of experience in the IT industry, I’ve had the privilege of 
         });
     </script>
                  
- <!-- Vendor JS Files -->
-                   <script src="Assets/typed.umd.js"></script>  
+ <!-- Vendor JS Files 
+                   <script src="Assets/typed.umd.js"></script>   -->
+
+     <!-- Add this script at the bottom of your HTML body -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let typedItems = document.querySelector('.typed').getAttribute('data-typed-items').split(',');
+    new Typed('.typed', {
+      strings: typedItems,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000,
+      loop: true
+    });
+  });
+</script>
+   
 
                              
 </body>
 </html>
+
 
 
 
