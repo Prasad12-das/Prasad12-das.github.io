@@ -19,6 +19,12 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -426,58 +432,50 @@
 
     <!-- Certifications Section -->
     <section id="certifications" class="certifications section-bg">
-      <div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
-          <h2>Certifications</h2>
-          <p>Here are some of the certifications I have earned to enhance my skills and knowledge in the field of data.</p>
+    <div class="section-title">
+      <h2>Certifications</h2>
+      <p>Here are some of the certifications I have earned to enhance my skills and knowledge in the field of data.</p>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper align-items-center">
+
+        <div class="swiper-slide">
+          <img src="assets/img/certification/AzureData.png" alt="Azure Certification">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/certification/Datacamp.png" alt="Datacamp Certification">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/certification/Databricks.png" alt="Databricks Certification">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/certification/AWS.png" alt="AWS Certification">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/certification/Linkedin.png" alt="LinkedIn Certification">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img/certification/Forage.png" alt="Forage Certification">
         </div>
 
       </div>
-
-      <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/certification/AzureData.png" alt="">
-                </div>
-
-                <!-- <div class="swiper-slide">
-                  <img src="assets/img/project/AdventureWorks_Sales/Power_BI_project_explanation.mp4" alt="">
-                </div> -->
-
-                <div class="swiper-slide">
-                  <img src="assets/img/certification/Datacamp.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/certification/Databricks.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/certification/AWS.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/certification/Linkedin.png" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/certification/Forage.png" alt="">
-                </div>
-                
-              </div>
-
-
-   <!-- <div class="slider">
-    <div class="slides">
-      <img src="assets/img/certification/AzureData.png" alt="Certification 1">
-      <img src="assets/img/certification/Datacamp.png" alt="Certification 2">
-      <img src="assets/img/certification/Databricks.png" alt="Certification 3">
-      <img src="assets/img/certification/AWS.png" alt="Certification 4">
-      <img src="assets/img/certification/Linkedin.png" alt="Certification 5">
-      <img src="assets/img/certification/Forage.png" alt="Certification 6">
+      <!-- Pagination + Navigation -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-  </div> -->
+
+  </div>
+</section>
 
   <!-- commented out on 09-06 -->
 
@@ -563,6 +561,35 @@
 
   </main>
 
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5000, // 5 sec transition
+      disableOnInteraction: false,
+    },
+    slidesPerView: 3,  // show 3 logos at a time
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      320: { slidesPerView: 1 },   // mobile
+      768: { slidesPerView: 2 },   // tablet
+      1024: { slidesPerView: 3 }   // desktop
+    }
+  });
+</script>
+
   <footer id="footer" >
     <div class="container">
       <h3 class="sitename">Sailaja Prasad Das</h3>
@@ -611,6 +638,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+
 
 </body>
 
