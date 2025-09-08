@@ -931,41 +931,18 @@ section {
 /*-----------------------------------------------------------
 # Certifications
 --------------------------------------------------------------*/
-.slider {
-      width: 80%;
-      max-width: 800px;
-      height: 400px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
 
-    .slides {
-      display: flex;
-      width: 500%; /* Adjust based on number of images */
-      animation: slide 20s infinite;
-    }
-
-    .slides img {
-      width: 100%;
-      height: 400px;
-      object-fit: contain;
-      background: #fff;
-    }
-
-    @keyframes slide {
-      0%   { transform: translateX(0%); }
-      20%  { transform: translateX(0%); }
-      25%  { transform: translateX(-100%); }
-      40%  { transform: translateX(-100%); }
-      45%  { transform: translateX(-200%); }
-      60%  { transform: translateX(-200%); }
-      65%  { transform: translateX(-300%); }
-      80%  { transform: translateX(-300%); }
-      85%  { transform: translateX(-400%); }
-      100% { transform: translateX(-400%); }
-    }
+/* Ensure all certifications have the same size */
+.certifications img {
+  max-width: 180px;   /* control image size */
+  max-height: 120px;
+  object-fit: contain; /* keeps logos neat */
+  margin: auto;        /* center align */
+  display: block;
+}
+.certifications {
+  padding: 60px 0;
+}
 
 /*--------------------------------------------------------------
 # Testimonials
